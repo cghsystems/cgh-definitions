@@ -1,0 +1,6 @@
+[submodule "cgh-definitions-swing-gui"]
+	path = cgh-definitions-swing-gui
+	url = https://github.com/cghsystems/cgh-definitions-swing-gui.git
+[submodule "cgh-definitions-services"]
+	path = cgh-definitions-services
+	url = https://github.com/cghsystems/cgh-definitions-services.git
