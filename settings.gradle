@@ -1,1 +1,1 @@
-include "cgh-definitions-services", "cgh-definitions-swing-gui"
+include "cgh-definitions-domain", "cgh-definitions-services", "cgh-definitions-swing-gui"

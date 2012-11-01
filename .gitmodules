@@ -4,3 +4,5 @@
 [submodule "cgh-definitions-services"]
 	path = cgh-definitions-services
 	url = https://github.com/cghsystems/cgh-definitions-services.git
+[submodule "cgh-definitions-domain"]
+    path = cgh-definitions-domain
