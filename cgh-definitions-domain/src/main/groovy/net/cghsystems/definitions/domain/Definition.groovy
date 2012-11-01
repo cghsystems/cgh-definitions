@@ -14,6 +14,10 @@ import groovy.transform.TupleConstructor
 @EqualsAndHashCode
 @TupleConstructor
 class Definition {
+
+    /** Empty implementation to enforce the null object pattern */
+    static Definition EMPTY_DEFINITION = new Definition(name: "Empty", definition: "Empty", description: "Empty")
+
     String id, name, definition, description
     Long definitionCategoryId
 }
