@@ -12,7 +12,7 @@ import groovy.transform.TupleConstructor
  */
 @ToString
 @EqualsAndHashCode
-@TupleConstructor
+@TupleConstructor(excludes = "id")
 class Definition {
 
     /** Empty implementation to enforce the null object pattern */
@@ -21,5 +21,11 @@ class Definition {
     /** <b>NOTE</b> id must be first property for @TupleConstructor reasons */
     String id, name, definition, description
     Long definitionCategoryId
+
+    static Definition buildWithId(id) {
+        final d = new Definition()
+        d.id = id
+        d
+    }
 
 }
