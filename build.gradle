@@ -25,6 +25,8 @@ subprojects {
         compile group: 'commons-logging', name: 'commons-logging', version: '1.1.1'
         compile group: 'cglib', name: 'cglib', version: '2.2.2'
         compile group: 'log4j', name: 'log4j', version: '1.2.16'
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.6.6'
+        compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.6'
 
         //Spring-core-required
         compile group: 'org.springframework', name: 'spring-context', version: SPRING_VERSION
@@ -55,10 +57,10 @@ subprojects {
     }
 
     integrationTest.doFirst {
-        tasks.getByPath(':cgh-definitions-services:startJettyAsDaemon').execute()
+        tasks.getByPath(':cgh-definitions-services-services:startJettyAsDaemon').execute()
     }
 
     integrationTest.doLast {
-        tasks.getByPath(':cgh-definitions-services:jettyStop').execute()
+        tasks.getByPath(':cgh-definitions-services-services:jettyStop').execute()
     }
 }
