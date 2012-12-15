@@ -13,7 +13,6 @@ subprojects {
     group = "net.cghsystems"
 
     repositories {
-        mavenLocal()
         mavenCentral()
         maven { url "http://repo.springsource.org/libs-snapshot" }
     }
