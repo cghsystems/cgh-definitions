@@ -52,15 +52,15 @@ subprojects {
         exclude '**/*IntegrationTest*'
     }
 
-    task integrationTest(type: Test, dependsOn: "test") << {
+    task integrationTest(type: Test, dependsOn: "test") {
         include '**/*IntegrationTest*'
     }
 
     integrationTest.doFirst {
-        tasks.getByPath(':cgh-definitions-services-services:startJettyAsDaemon').execute()
+        tasks.getByPath(':cgh-definitions-services:startJettyAsDaemon').execute()
     }
 
     integrationTest.doLast {
-        tasks.getByPath(':cgh-definitions-services-services:jettyStop').execute()
+        tasks.getByPath(':cgh-definitions-services:jettyStop').execute()
     }
 }
