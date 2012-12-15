@@ -3,6 +3,7 @@ ext.GROOVY_VERSION = "2.0.5"
 ext.SPRING_INTEGRATION_VERSION = '2.2.0.RC1'
 ext.CLOUD_FOUNDRY_VERSION = "0.8.2"
 
+defaultTasks = ['test']
 
 subprojects {
 
@@ -12,7 +13,7 @@ subprojects {
     group = "net.cghsystems"
 
     repositories {
-        //mavenLocal()
+        mavenLocal()
         mavenCentral()
         maven { url "http://repo.springsource.org/libs-snapshot" }
     }
