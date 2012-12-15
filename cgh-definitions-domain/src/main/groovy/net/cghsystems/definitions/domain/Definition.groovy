@@ -15,9 +15,6 @@ import groovy.transform.TupleConstructor
 @TupleConstructor(excludes = "id")
 class Definition {
 
-    /** Empty implementation to enforce the null object pattern */
-    static Definition EMPTY_DEFINITION = new Definition(name: "Empty", definition: "Empty", description: "Empty")
-
     /** <b>NOTE</b> id must be first property for @TupleConstructor reasons */
     String id, name, definition, description
     Long definitionCategoryId
